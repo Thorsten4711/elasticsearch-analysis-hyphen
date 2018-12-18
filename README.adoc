@@ -28,7 +28,7 @@ For examples, see the link:https://jprante.github.io/elasticsearch-analysis-hyph
 
 === 6.5.3
 
-Download elasticsearch-analysis-hyphen-6.5.3-plugin.zip
+Download http://www.netcorner.org/elasticsearch-analysis-hyphen-6.5.3-plugin.zip
 
 [source]
 ----
