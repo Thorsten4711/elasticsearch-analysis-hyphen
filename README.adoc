@@ -1,13 +1,8 @@
 = Hyphen analysis for Elasticsearch
 
-image:https://api.travis-ci.org/jprante/elasticsearch-analysis-hyphen.svg[title="Build status", link="https://travis-ci.org/jprante/elasticsearch-analysis-hyphen/"]
-image:https://sonarqube.com/api/badges/gate?key=org.xbib.elasticsearch.plugin:elasticsearch-analysis-hyphen[title="Coverage", link="https://sonarqube.com/dashboard/index?id=org.xbib.elasticsearch.plugin%3Aelasticsearch-analysis-hyphen"]
-image:https://sonarqube.com/api/badges/measure?key=org.xbib.elasticsearch.plugin:elasticsearch-analysis-hyphen&metric=sqale_debt_ratio[title="Technical debt ration", link="https://sonarqube.com/dashboard/index?id=org.xbib.elasticsearch.plugin%3Aelasticsearch-analysis-hyphen"]
-image:https://maven-badges.herokuapp.com/maven-central/org.jprante/elasticsearch-analysis-hyphen/badge.svg[title="Maven Central", link="http://search.maven.org/#search%7Cga%7C1%7Cxbib%20elasticsearch-analysis-hyphen"]
-image:https://img.shields.io/badge/License-Apache%202.0-blue.svg[title="Apache License 2.0", link="https://opensource.org/licenses/Apache-2.0"]
-image:https://img.shields.io/twitter/url/https/twitter.com/xbib.svg?style=social&label=Follow%20%40xbib[title="Twitter", link="https://twitter.com/xbib"]
+This project originally was created by Jörg Prante. This is a fork to make it compatible with ElasticSearch 6.5.3.
 
-image:https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif[title="PayPal", link="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=GVHFQYZ9WZ8HG"]
+Original description:
 
 This plugin for Elasticsearch can handle hyphens and other symbols in words or at word boundaries for improved search precision.
 
@@ -26,23 +21,25 @@ For examples, see the link:https://jprante.github.io/elasticsearch-analysis-hyph
 .Version compatibility
 |===
 |Plugin |Elasticsearch |Release date
-|5.1.1.0 |5.1.1 |Dec 23, 2016
+|6.5.3  |6.5.3 |Dec 18, 2018
 |===
 
 == Installation
 
-=== 5.x
+=== 6.5.3
+
+Download elasticsearch-analysis-hyphen-6.5.3-plugin.zip
 
 [source]
 ----
-./bin/elasticsearch-plugin install http://xbib.org/repository/org/xbib/elasticsearch/plugin/elasticsearch-analysis-hyphen/5.1.1.0/elasticsearch-analysis-hyphen-5.1.1.0-plugin.zip
+./bin/elasticsearch-plugin install file:///path-to-zip-file/elasticsearch-analysis-hyphen-6.5.3-plugin.zip
 ----
 
 Do not forget to restart the node after installing.
 
 == Issues
 
-All feedback is welcome! If you find issues, please post them at https://github.com/jprante/elasticsearch-analysis-hyphen/issues[Github]
+All feedback is welcome! If you find issues, please post them at https://github.com/Thorsten4711/elasticsearch-analysis-hyphen/issues[Github]
 
 
 = License
@@ -50,6 +47,8 @@ All feedback is welcome! If you find issues, please post them at https://github.
 Hyphen Analysis Plugin for Elasticsearch
 
 Copyright (C) 2016 Jörg Prante
+
+Modifications (C) 2018 by Thorsten Jungblut
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
