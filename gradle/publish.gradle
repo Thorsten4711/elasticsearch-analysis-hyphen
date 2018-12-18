@@ -43,7 +43,7 @@ task sonatypeUpload(type: Upload) {
                     developers {
                         developer {
                             id user
-                            name 'JÃ¶rg Prante'
+                            name 'Jörg Prante'
                             email 'joergprante@gmail.com'
                             url 'https://github.com/jprante'
                         }

@@ -3,6 +3,7 @@ plugins {
     id "org.sonarqube" version "2.2"
     id "org.xbib.gradle.plugin.jflex" version "1.1.0"
     id "org.xbib.gradle.plugin.asciidoctor" version "1.5.4.1.0"
+    id 'eclipse'
 }
 
 printf "Host: %s\nOS: %s %s %s\nJVM: %s %s %s %s\nGroovy: %s\nGradle: %s\n" +
@@ -28,7 +29,7 @@ ext {
     scmConnection = 'scm:git:git://github.com/' + user + '/' + name + '.git'
     scmDeveloperConnection = 'scm:git:git://github.com/' + user + '/' + name + '.git'
     versions = [
-        'elasticsearch' : '5.1.1',
+        'elasticsearch' : '6.5.3',
         'log4j': '2.7'
     ]
 }
@@ -106,7 +107,6 @@ task makePluginDescriptor(type: Copy) {
 task buildPluginZip(type: Zip, dependsOn: [':jar', ':makePluginDescriptor']) {
     from configurations.distJars
     from 'build/tmp/plugin'
-    into 'elasticsearch'
     classifier = 'plugin'
 }
 

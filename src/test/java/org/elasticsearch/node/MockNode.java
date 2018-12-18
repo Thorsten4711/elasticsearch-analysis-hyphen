@@ -1,11 +1,11 @@
 package org.elasticsearch.node;
 
-import org.elasticsearch.common.settings.Settings;
-import org.elasticsearch.node.internal.InternalSettingsPreparer;
-import org.elasticsearch.plugins.Plugin;
-
 import java.util.ArrayList;
 import java.util.Collection;
+
+import org.elasticsearch.common.logging.LogConfigurator;
+import org.elasticsearch.common.settings.Settings;
+import org.elasticsearch.plugins.Plugin;
 
 /**
  *
@@ -13,7 +13,7 @@ import java.util.Collection;
 public class MockNode extends Node {
 
     public MockNode(Settings settings, Collection<Class<? extends Plugin>> classpathPlugins) {
-        super(InternalSettingsPreparer.prepareEnvironment(settings, null), classpathPlugins);
+        super(InternalSettingsPreparer.prepareEnvironment(settings, null), classpathPlugins, false);
     }
 
     public MockNode(Settings settings, Class<? extends Plugin> classpathPlugin) {
@@ -32,5 +32,10 @@ public class MockNode extends Node {
         Collection<Class<? extends Plugin>> list = new ArrayList<>();
         list.add(classpathPlugin);
         return list;
+    }
+
+    @Override
+    protected void registerDerivedNodeNameWithLogger(String nodeName) {
+        LogConfigurator.setNodeName(nodeName);
     }
 }
